@@ -89,10 +89,10 @@ main {
 }
 
 .card-character {
-    width: 20rem;
+    width: 21rem;
     height: 12rem;
     background-color: #260b3e;
-    border: groove 7px #000000;
+    border: none;
     border-radius: 5px;
     margin: 1rem;
     display: flex;

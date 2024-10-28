@@ -4,10 +4,19 @@ const URL1 = "https://rickandmortyapi.com/api/character";
 const URL2 = "https://rickandmortyapi.com/api/character/?name=";
 
 const getApi = async (URL) => {
-    const response = await fetch(URL)
-    const data = await response.json()
+
+    try {
+        const response = await fetch(URL)
+        const data = await response.json()
     
-    return data.results
+    return data.results;
+    } catch (error) {
+        console.error(error)
+    }
+    // const response = await fetch(URL)
+    // const data = await response.json()
+    // return data.results;
+
 };
 
 const createCards = (character) => {
@@ -50,6 +59,7 @@ const filterByName = async (event) => {
     const data = await getApi(URL2 + event.target.value)
     data.map( character => createCards(character))
 }
+
 
 window.addEventListener('DOMContentLoaded', generateAllCharacters);
 txtCharacter.addEventListener('keyup',filterByName)

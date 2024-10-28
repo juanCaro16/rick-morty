@@ -11,6 +11,7 @@ const getApi = async (URL) => {
     
     return data.results;
     } catch (error) {
+        
         console.error(error)
     }
     // const response = await fetch(URL)

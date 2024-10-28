@@ -29,13 +29,13 @@ header {
 h1 {
     font-size: 5rem;
     text-shadow: 0 0 20px #ffff00;
-    color: #54d2d2;
+    color: #19C10B;
     animation: changeTitle 1s infinite;
 }
 
 @keyframes changeTitle {
     50% {
-        text-shadow: 0 0 20px #54d2d2;
+        text-shadow: 0 0 20px #19C10B;
         color: #ffff00;
     }
 }
@@ -46,15 +46,15 @@ hr {
     border: none;            
     height: 1rem;     
     border-radius: 10px;        
-    background-color: #00fffb; 
-    animation: changeHr 1s infinite;
-    box-shadow: 0 0 20px #ffff00;
+    background-color: #ffff00; 
+    animation: changeHr 2s infinite;
+    box-shadow: 0 0 20px #39c416;
 }
 
 @keyframes changeHr {
     50%{
-        background-color: #ffff00;
-        box-shadow: 0 0 20px #00fffb;
+        background-color: #39c416;
+        box-shadow: 0 0 20px #ffff00;
     }
 }
 
@@ -90,7 +90,7 @@ main {
 
 .card-character {
     width: 20rem;
-    height: 10rem;
+    height: 12rem;
     background-color: #260b3e;
     border: groove 7px #000000;
     border-radius: 5px;
@@ -112,16 +112,40 @@ main {
     align-items: center;
 }
 
+
 .description-card > h2 {
     text-align: center;
     color: #ffff00;
+    animation: fadeInTitle 2s ease-in-out forwards; 
 }
+@keyframes fadeInTitle {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
+  
+
+  @keyframes fadeInUp {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .description-card > p {
     font-size: 1.5rem;
     text-align: center;
     color: #ffffff;
-    margin-top: 2rem;
+    margin-top: 1.3rem;
+    animation: fadeInUp 3.5s ease-in-out both;
+    transform: translateY(50px);
 }
+
 
 
